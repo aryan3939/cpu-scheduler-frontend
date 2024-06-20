@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CPU SCHEDULER</h1>
+        </header>
+        <main>
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="numProcesses" >No of Process</label>
+                    <input type="number" id="numProcesses" min="1" placeholder="Enter data">
+                </div>
+                <div class="input-group">
+                    <label for="quantumTime">Quantum Time</label>
+                    <input type="number" id="quantumTime" min="1" placeholder="Enter data">
+                </div>
+                <button id="randomDataBtn">Random Data</button>
+            </div>
+            <table id="processTable">
+                <thead>
+                    <tr>
+                        <th>ProcessID</th>
+                        <th>Arrival Time</th>
+                        <th>Burst Time</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody id="processTableBody">
+                    <tr>
+                        <td id="id_no">P1</td>
+                        <td><input id="table_no" type="number" min="0" class="arrivalTime" placeholder="Enter data"></td>
+                        <td><input id="table_no" type="number" min="1" class="burstTime" placeholder="Enter data"></td>
+                        <td><input id="table_no" type="number" min="1" class="priority" placeholder="Enter data"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="button-section">
+                <button id="compareBtn">Compare</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+            <div id="output">            </div>
+
+            <!-- Visualization Sections (Initially Hidden) -->
+            <div id="visualizationSection" class="visualization-section hidden">
+                <div id="best"> The best algorithm is </div>
+                <div id="ganttChart" class="chart"> <!-- <img src="gantt.png" alt="Gantt Chart"> -->
+                    <!-- <h2>Gantt Chart</h2>
+                    Gantt chart will be rendered here -->
+                </div>
+                <table id="outputTable">
+                    <thead>
+                        <tr>
+                            <th>ProcessID</th>
+                            <th>Arrival Time</th>
+                            <th>Burst Time</th>
+                            <th>Priority</th>
+                            <th>Completion Time</th>
+                            <th>Turnaround Time</th>
+                            <th>Waiting Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="outputTableBody">
+                        <!-- Output data will be rendered here -->
+                    </tbody>
+                </table>
+                <div class="chart-section">
+                    <div id="barChart" class="chart">
+                        <h2>Average Waiting Time</h2>
+                        <!-- Bar chart 1 will be rendered here -->
+                    </div>
+                    <div id="barExplain"  class="chart-explanation">
+                        <p>Explanation about the Average Waiting Time chart.</p>
+                    </div>
+                </div>
+                <div class="chart-section">
+                    <div id="barChart" class="chart">
+                        <h2>Average Turnaround Time</h2>
+                        <!-- Bar chart 2 will be rendered here -->
+                    </div>
+                    <div id="barExplain" class="chart-explanation">
+                        <p>Explanation about the Average Turnaround Time chart.</p>
+                    </div>
+                </div>
+                <div class="chart-section">
+                    <div id="barChart" class="chart">
+                        <h2>CPU Utilization</h2>
+                        <!-- Bar chart 3 will be rendered here -->
+                    </div>
+                    <div id="barExplain"  class="chart-explanation">
+                        <p>Explanation about the CPU Utilization chart.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p><i>Made by Aryan</i></p>
+            <div class="social-links">
+                <a id="linedin" href="https://www.linkedin.com/in/aryan-kumar-59968b177/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+                <a id="github" href="https://github.com/aryan3939" target="_blank"><img src="github.png" alt="GitHub"></a>
+                <a id="insta" href="https://instagram.com/aryan__3939" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
